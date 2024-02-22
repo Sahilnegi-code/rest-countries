@@ -1,0 +1,65 @@
+.btn-left button{
+  margin-top: 2rem;
+  padding: 1.2rem 3rem;
+}
+.arrowLeft {
+  margin-right: 15px;
+}
+.card-details-img {
+  border: 1px solid green;
+  width: 50%;
+  height: 100%;
+}
+.card-details-img img {
+  border: 1px solid green;
+  width: 100%;
+  height: 100%;
+}
+
+.card-details {
+  display: flex;
+    height: 350px;
+    width: 100%;
+}
+.card-details .card-data {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+.card-value {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.card-details-body ul li {
+  list-style: none;
+}
+.card-details-body ul {
+  columns: 2;
+}
+.country-heading {
+  margin-bottom: 2rem;
+  font-size: 3.5rem;
+}
+.card-details-container {
+  padding-left: 7rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid red;
+  height: 100%;
+  justify-content: center;
+  padding-left: 7rem;
+}
+
+.btn {
+  padding: 0.4rem 2rem;
+  background: white;
+  border: none;
+  box-shadow: 0px 0px 29px -11px grey, 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  outline: none;
+  margin: 0 5px 5px 4px;
+}
+.border-countries{
+  margin-top: 3rem;
+}

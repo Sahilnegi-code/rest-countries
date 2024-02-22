@@ -1,0 +1,32 @@
+.navbar-wrapper {
+  display: flex;
+  height: 90px;
+  justify-content: center;
+  align-items: center;
+  
+}
+.mode-toggle {
+  display: flex;
+  gap: 10px;
+  display: flex;
+  font-weight: 600;
+  font-size: 1.4rem;
+  width: 50%;
+  justify-content: flex-end;
+}
+.nav-brand {
+  font-size: 3rem;
+  font-weight: 600;
+  width: 50%;
+  text-align: left;
+}
+
+.mode-toggle {
+  font-weight: 600;
+  font-size: 1.4rem;
+  width: 50%;
+  text-align: right;
+}
+.fa-moon {
+  font-size: 20px;
+}

@@ -1,0 +1,12 @@
+.filter-region {
+    justify-self: flex-end;
+    width: 50%;
+    text-align: right;
+  }
+  .filter-region select {
+    font-size: 2rem;
+    width: 215px;
+    height: 100%;
+    padding: 2rem 2rem;
+  }
+  

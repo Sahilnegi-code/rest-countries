@@ -1,0 +1,55 @@
+.inputbox-wrapper {
+  width: 50%;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  border-radius: 6px;
+  padding: 2rem 2rem;
+  min-width: 300px;
+
+  box-shadow: 0px -1px 17px -3px rgba(0, 0, 0, 0.26);
+  -webkit-box-shadow: 0px -1px 17px -3px rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 0px -1px 17px -3px rgba(0, 0, 0, 0.26);
+}
+.search-box {
+  margin-left: 1.6rem;
+  outline: none;
+  border: none;
+  width: 500px;
+  width: 100%;
+}
+.fa-magnifyingGlass {
+  font-size: 1.5rem;
+}
+.filterContainer {
+  padding: 6rem 0rem;
+  display: flex;
+  width: 100%;
+}
+.filter-region {
+  justify-self: flex-end;
+  width: 50%;
+  text-align: right;
+}
+.filter-region select {
+  font-size: 2rem;
+  width: 215px;
+  height: 100%;
+  padding: 2rem 2rem;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.card-description {
+  padding: 2rem;
+}
+.inputbox-wrappper input::placeholder{
+
+  color: white;
+
+
+} 
