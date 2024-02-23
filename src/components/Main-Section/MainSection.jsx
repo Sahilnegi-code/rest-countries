@@ -124,7 +124,6 @@ console.log(uniqueCurrency);
   }): filterSubSelectedRegion ;
  
 let filterCurrency = selectedCurrency.length !== 0 ?  filterSortedOption.filter((curr)=>{
-// console.log('sahil');
 let check  = false;
   if(curr.currencies !== undefined){
 
@@ -171,10 +170,14 @@ console.log(filterCurrency);
 
   useEffect(() => {
     async function fetchData() {
+
       const response = await fetch("https://restcountries.com/v3.1/all");
       const data = await response.json();
+
       handlingUniqueRegion(data);
+     
       setCountryData(data);
+
       setLoading(false);
     }
 
@@ -211,6 +214,7 @@ console.log(filterCurrency);
             value={input}
           />
         </div>
+
         <Filter
           handleOptionChange={handleSelectedRegion}
           Option={selectedRegion}

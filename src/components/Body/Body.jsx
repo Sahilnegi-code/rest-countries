@@ -12,6 +12,7 @@ const Body = () => {
           ? darkMode.dark.mainSectionBackground
           : darkMode.light.mainSectionBackground
       }`,
+      minHeight:'100vh'
     }}
   >
     <MainSection />

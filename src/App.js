@@ -10,7 +10,7 @@ import CardDetails from "./components/Card-Details/CardDetails";
 
 export const themeContext = createContext(null);
 function App() {
-  const [toggleTheme, setToggleTheme] = useState(true);
+  const [toggleTheme, setToggleTheme] = useState(false);
   const darkMode = {
     light: {
       navbarBackground: "white",
