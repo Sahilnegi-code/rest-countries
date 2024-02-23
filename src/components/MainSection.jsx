@@ -8,7 +8,8 @@ import "./mainsection.css";
 import Cards from "./Cards";
 import NotFound from "./NotFound";
 import Loading from "./Loading";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 const MainSection = () => {
   const [countryData, setCountryData] = useState([]);
   const [selectedRegion, setSelectedRegion] = useState("");
@@ -16,7 +17,7 @@ const MainSection = () => {
   const [input, setInputValue] = useState("");
   const [loading, setLoading] = useState(true);
   const [  selectSortOption, setSelectSortOption  ] = useState("");
-
+const [ selectedCurrency , setSelectedCurrency ]  = useState("");
   const [uniqueRegion, setUniqueRegion] = useState([]);
   const { setToggleTheme, toggleTheme, darkMode } = useContext(themeContext);
 
@@ -35,13 +36,21 @@ const MainSection = () => {
     uniqRegion = Object.keys(uniqRegion);
     setUniqueRegion(uniqRegion);
   }
+  
+function handlingSelectedCurrency (e){
+  setSelectedCurrency(e.target.value);
+}
 
   let filterCountry = countryData.filter((country) => {
+
+
     if (country.name.common.toLowerCase().includes(input.toLowerCase())) {
       return true;
     }
 
+
     return false;
+
   });
 
   let filterSelectedRegion = selectedRegion.length
@@ -67,6 +76,21 @@ const MainSection = () => {
         }, {})
       )
     : [];
+
+let uniqueCurrency =  countryData .length ? Object.keys( countryData.reduce((acc, currObj)=>{
+
+  if(currObj.currencies !== undefined){
+    let name = Object.values( currObj.currencies )[0].name;
+        acc[name] = 'present';
+  }
+
+  
+return acc;
+}, {})) :[];
+
+
+
+console.log(uniqueCurrency);
 
   function handleSelectedRegion(e) {
     let region = e.target.value;
@@ -100,7 +124,26 @@ const MainSection = () => {
     
   }): filterSubSelectedRegion ;
  
+let filterCurrency = selectedCurrency.length !== 0 ?  filterSortedOption.filter((curr)=>{
+// console.log('sahil');
+let check  = false;
+  if(curr.currencies !== undefined){
+    
+    Object.values( curr.currencies ).forEach((curName)=>{
 
+      if( curName.name.toLowerCase() === selectedCurrency.toLowerCase()){
+        check = true;
+      } 
+    })
+   if(check){
+    return true;
+   }
+   return false;
+  }
+
+}) :filterSortedOption;
+
+console.log(filterCurrency);
 
 
   function handleSort(e){
@@ -122,6 +165,10 @@ const MainSection = () => {
       inputString.charAt(0).toUpperCase() + inputString.slice(1).toLowerCase()
     );
   }
+
+  console.log( countryData );
+  
+
 
   useEffect(() => {
     async function fetchData() {
@@ -183,20 +230,30 @@ const MainSection = () => {
           uniqueData={sortedOption}
           name="Sort By "
         />
+        <Filter
+          handleOptionChange={handlingSelectedCurrency}
+          Option={selectedCurrency}
+          name=" Currency "
+          uniqueData={uniqueCurrency}
+        />
+
+
+
       </div>
-      {loading ? (
+      {
+      loading ? (
         <div>
           <Loading />
         </div>
       ) : (
         <div className="card-container">
           {
-          filterSortedOption.length !== 0 ? (
-            filterSortedOption.map((curr) => {
+          filterCurrency.length !== 0 ? (
+            filterCurrency.map((curr) => {
               return(
-                
+                <Link to= {`country/${curr.cca3}`} style={{textDecoration:'none'}} >
                 <Cards cardData={curr} />
-
+                </Link>
               )
             }
            

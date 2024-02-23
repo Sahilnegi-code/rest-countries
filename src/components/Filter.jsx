@@ -10,8 +10,9 @@ const Filter = ({handleOptionChange,
           inputString.charAt(0).toUpperCase() + inputString.slice(1).toLowerCase()
         );
       }
-      // console.log(uniqueData);
-      // console.log(name);
+      console.log(uniqueData);
+      console.log(name)
+      // console.log(uniqueData.map((curr)=> typeof(curr)));
   return (
     <div class="filter-region">
     
@@ -30,7 +31,7 @@ const Filter = ({handleOptionChange,
 
       uniqueData.map((curr) => (
      
-        <option    value={curr.toLowerCase() ? curr.toLowerCase() : ""} >
+       curr !== 'undefined'  &&  <option    value={curr.toLowerCase() ? curr.toLowerCase() : ""} >
           {capitalizeFirstLetter(curr)}
         </option>
 

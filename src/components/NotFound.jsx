@@ -5,7 +5,7 @@ const NotFound = () => {
   const {toggleTheme} = useContext(themeContext);
   return (
     <div className="no-found"
-    style={{color: `${ toggleTheme ? 'black' :'white'}` }}
+    style={{color: `${ toggleTheme ? 'black' :'white'}`   }}
     >
       <h2> No such countries found </h2>
     </div>
