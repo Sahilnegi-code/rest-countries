@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import "./notfound.css";
-import {themeContext} from '../App'
+import {themeContext} from '../../App'
 const NotFound = () => {
   const {toggleTheme} = useContext(themeContext);
   return (

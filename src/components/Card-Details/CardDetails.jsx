@@ -4,8 +4,8 @@ import "./cardDetails.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import Loading from "./Loading";
-import { themeContext } from "../App";
+import Loading from "../Loading/Loading";
+import { themeContext } from "../../App";
 
 const CardDetails = () => {
   const [details, setDetails] = useState([]);

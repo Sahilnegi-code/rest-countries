@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import { themeContext } from "../App";
+import { themeContext } from "../../App";
 import './filter.css'
 const Filter = ({handleOptionChange, 
     Option ,

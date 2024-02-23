@@ -1,6 +1,6 @@
 import React , { useContext }   from 'react';
-import { themeContext } from "../App";
-import MainSection from './MainSection';
+import { themeContext } from "../../App";
+import MainSection from '../Main-Section/MainSection';
 const Body = () => {
     const {toggleTheme , darkMode } = useContext(themeContext);
   return (

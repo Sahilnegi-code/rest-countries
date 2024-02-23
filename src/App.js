@@ -3,10 +3,10 @@ import { Routes, Route, Outlet } from "react-router-dom";
 
 import logo from "./logo.svg";
 import "./App.css";
-import Navbar from "./components/Navbar";
-import MainSection from "./components/MainSection";
-import Body from "./components/Body";
-import CardDetails from "./components/CardDetails";
+import Navbar from "./components/NavBar/Navbar";
+import MainSection from "./components/Main-Section/MainSection";
+import Body from "./components/Body/Body";
+import CardDetails from "./components/Card-Details/CardDetails";
 
 export const themeContext = createContext(null);
 function App() {

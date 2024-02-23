@@ -1,13 +1,12 @@
 import React, { useState, useEffect, createContext, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { CounterContext } from "../CounterContext";
-import Filter from "./Filter";
-import { themeContext } from "../App";
+import Filter from "../Filter/Filter";
+import { themeContext } from "../../App";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import "./mainsection.css";
-import Cards from "./Cards";
-import NotFound from "./NotFound";
-import Loading from "./Loading";
+import Cards from "../Card/Cards";
+import NotFound from "../NotFound/NotFound";
+import Loading from "../Loading/Loading";
 import { Link } from "react-router-dom";
 
 const MainSection = () => {
@@ -128,7 +127,7 @@ let filterCurrency = selectedCurrency.length !== 0 ?  filterSortedOption.filter(
 // console.log('sahil');
 let check  = false;
   if(curr.currencies !== undefined){
-    
+
     Object.values( curr.currencies ).forEach((curName)=>{
 
       if( curName.name.toLowerCase() === selectedCurrency.toLowerCase()){

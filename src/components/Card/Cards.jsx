@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./card.css";
-import { themeContext } from "../App";
+import { themeContext } from "../../App";
 const Cards = ({ cardData }) => {
   const { darkMode, setToggleTheme, toggleTheme } = useContext(themeContext);
 // console.log(cardData)

@@ -1,5 +1,5 @@
 import React , {useContext} from "react";
-import {themeContext} from '../App' ; 
+import {themeContext} from '../../App' ; 
 import "./navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon } from "@fortawesome/free-regular-svg-icons";
