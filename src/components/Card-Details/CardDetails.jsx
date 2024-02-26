@@ -22,7 +22,6 @@ const CardDetails = () => {
     
   }
 
-  console.log(details);
   useEffect(() => {
 
       fetchData();

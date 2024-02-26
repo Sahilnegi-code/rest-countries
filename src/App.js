@@ -1,7 +1,6 @@
 import React, { Component, createContext, useState } from "react";
 import { Routes, Route, Outlet } from "react-router-dom";
 
-import logo from "./logo.svg";
 import "./App.css";
 import Navbar from "./components/NavBar/Navbar";
 import MainSection from "./components/Main-Section/MainSection";
@@ -66,8 +65,7 @@ function App() {
 
     },
   };
-  console.log(toggleTheme);
-  return (
+   return (
 
 
 

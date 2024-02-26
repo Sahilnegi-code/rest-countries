@@ -1,14 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Outing from "./Outing";
 import "./index.css";
-import CardDetails from "./components/Card-Details/CardDetails";
 import  App from "./App";   
+import { ChakraProvider } from '@chakra-ui/react'
+
 import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
-<BrowserRouter>
-  <App />
-</BrowserRouter>
+
+    <BrowserRouter>
+     <App />
+     </BrowserRouter>
+
+
 
 , document.getElementById("root"));
