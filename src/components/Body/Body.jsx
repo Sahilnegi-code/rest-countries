@@ -5,7 +5,7 @@ const Body = () => {
     const {toggleTheme , darkMode } = useContext(themeContext);
   return (
     <div
-    className="main-container"
+  
     style={{
       backgroundColor: `${
         !toggleTheme

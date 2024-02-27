@@ -1,5 +1,5 @@
 .inputbox-wrapper {
-  width: 50%;
+  width: 250px;
   display: flex;
   -ms-flex-align: center;
   align-items: center;
@@ -12,13 +12,7 @@
   -webkit-box-shadow: 0px -1px 17px -3px rgba(0, 0, 0, 0.26);
   -moz-box-shadow: 0px -1px 17px -3px rgba(0, 0, 0, 0.26);
 }
-.search-box {
-  margin-left: 1.6rem;
-  outline: none;
-  border: none;
-  width: 500px;
-  width: 100%;
-}
+
 .fa-magnifyingGlass {
   font-size: 1.5rem;
 }

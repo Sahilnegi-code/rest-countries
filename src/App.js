@@ -1,12 +1,13 @@
 import React, { Component, createContext, useState } from "react";
-import { Routes, Route, Outlet } from "react-router-dom";
-
+import { Routes, Route } from "react-router-dom";
+import { Box } from '@chakra-ui/react'
 import logo from "./logo.svg";
 import "./App.css";
 import Navbar from "./components/NavBar/Navbar";
 import MainSection from "./components/Main-Section/MainSection";
 import Body from "./components/Body/Body";
 import CardDetails from "./components/Card-Details/CardDetails";
+import { ChakraProvider , extendTheme } from "@chakra-ui/react";
 
 export const themeContext = createContext(null);
 function App() {
@@ -21,7 +22,7 @@ function App() {
         background: "white",
         border: "none",
         outline: "none",
-        background: 'white',
+        color:'black',
      boxShadow: '7px 1px 24px -16px rgba(0, 0, 0,0.83)',
     },
     cardDetailsCss :{
@@ -45,8 +46,6 @@ function App() {
         color: "white",
         border: "none",
         outline: "none",
-        
-
       },
       inputBox:{
         'input::placeholder':{
@@ -66,16 +65,23 @@ function App() {
 
     },
   };
-  console.log(toggleTheme);
+
+  const theme = extendTheme({
+
+ darkMode
+
+  });
+  
+
   return (
 
-
+    <ChakraProvider theme = {theme }>
 
     <themeContext.Provider value={{ setToggleTheme, toggleTheme, darkMode }}>
 
 
 
-      <div
+      <Box
         className="nav-shadow"
         style={{
           color: `${
@@ -94,7 +100,7 @@ function App() {
        <Navbar/>
 
         
-      </div>
+      </Box>
 
         <Routes>
         <Route path="/" element={<Body/>} />
@@ -105,6 +111,8 @@ function App() {
 
 
     </themeContext.Provider>
+
+    </ChakraProvider>
   );
 }
 
