@@ -45,7 +45,7 @@ const CardDetails = () => {
   {
           details.length ?
          <>
-                 <div className="btn-left">
+            <div className="btn-left">
               <button
                 className="btn"
                 style={
@@ -59,6 +59,7 @@ const CardDetails = () => {
                 Back
               </button>
             </div>
+
             <Box className="card-details" >
 
 

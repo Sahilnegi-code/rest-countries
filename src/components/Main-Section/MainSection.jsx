@@ -178,7 +178,7 @@ const MainSection = () => {
  
   return (
     <Flex  width={"90%"} margin={"auto"} flexWrap={"wrap"}  >
-      <Flex gap="10px" padding={"6rem 0rem"}  width={"100%"}   flexWrap={"wrap" } alignItems={"center" } justifyContent='center  ' >
+      <Flex gap="10px" padding={"6rem 0rem"}  width={"100%"}  flexWrap={"wrap" } alignItems={"center" } justifyContent='space-between' >
         <Box 
           className={`inputbox-wrapper ${
             !toggleTheme && "inputbox-wrappper input::placeholder"
