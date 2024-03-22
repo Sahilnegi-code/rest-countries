@@ -9,15 +9,17 @@
   margin-right: 15px;
 }
 .card-details-img {
-  width: 50%;
+  width: 500px;
+  margin: auto;
 }
 .card-details-img img {
   width: 100%;
+  height: 400px;
 }
 
 .card-details {
   display: flex;
-    height: 350px;
+
     width: 100%;
 }
 .card-details .card-data {
@@ -40,11 +42,11 @@
   font-size: 3.5rem;
 }
 .card-details-container {
+  margin: auto;
   padding-left: 7rem;
   width: 50%;
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: center;
   padding-left: 7rem;
 }
@@ -61,4 +63,27 @@
 .border-countries{
   margin-top: 3rem;
 
+}
+.container{
+  width: 80% !important;
+  margin: auto;
+}
+
+
+@media  (max-width: 750px) {
+  /* CSS styles to apply when viewport width is 600px or less */
+  .card-details{
+    display: block;
+    margin: auto;
+  } 
+  .card-details-container {
+    
+    margin-top: 30px;
+    width: 100%;
+    padding-left: 0rem;
+  }
+  .card-details-img {
+    width: 100%;
+    margin: auto;
+  }
 }

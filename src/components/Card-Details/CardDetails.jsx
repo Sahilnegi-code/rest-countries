@@ -6,6 +6,7 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import Loading from "../Loading/Loading";
 import { themeContext } from "../../App";
+import {  Box, Flex } from "@chakra-ui/react";
 
 const CardDetails = () => {
   const [details, setDetails] = useState([]);
@@ -39,7 +40,7 @@ const CardDetails = () => {
         }
       >
       
-          <div className="container">
+          <div style={{width:'70%' , margin:'auto'}}>
     
   {
           details.length ?
@@ -58,10 +59,14 @@ const CardDetails = () => {
                 Back
               </button>
             </div>
-            <div className="card-details">
+            <Box className="card-details" >
+
+
               <div className="card-details-img">
                 <img src={details[0].flags.svg} alt="" />
               </div>
+
+
               <div className="card-details-container">
                 <h3 className="country-heading">
                   {details.length &&
@@ -204,7 +209,9 @@ const CardDetails = () => {
                   ))}
                 </div>
               </div>
-            </div>
+
+
+            </Box>
          </>          
      : (
           <Loading />

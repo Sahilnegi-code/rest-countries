@@ -54,7 +54,7 @@ function App() {
       },
       cardDetailsCss :{
         background:'hsl(207, 26%, 17%)',
-        height: '90vh',
+        minHeight: '100vh',
         color:'white',
         button:{
           backgroundColor: 'rgb(43, 57, 69)',
